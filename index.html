@@ -23,13 +23,13 @@
         <div class="js-pic game-pic"></div>
 
         <div class="js-answer-result answer-result">
-            <span class="success is-hidden">ДА!</span>
-            <span class="failure is-hidden">НЕТ!</span>
+            <span class="success is-hidden">ДА</span>
+            <span class="failure is-hidden">НЕТ</span>
         </div>
 
         <div class="game-buttons">
             <button onclick="hatOrCat.answer('hat')">Шапка</button>
-            <div class="js-score-block score-block">Счет: <span class="js-score-value"></span>/<span class="js-total-pics"></span></div>
+            <div class="js-score-block score-block"><span class="js-score-value"></span> из <span class="js-total-pics"></span></div>
             <button class="js-next next is-hidden" onclick="hatOrCat.next()">Дальше</button>
             <button onclick="hatOrCat.answer('cat')">Кот</button>
         </div>
@@ -38,6 +38,10 @@
 
     <div class="final-stage stage">
         <div class="final-result">
+            <div class="final-score-block">
+                Ты набрал
+                <div class="js-final-score-value"></div>
+            </div>
             <div class="js-final-1 is-hidden">ХОРОШ! Идеальное знание</div>
             <div class="js-final-2 is-hidden">Неплохо! Старайся лучше</div>
             <div class="js-final-3 is-hidden">ПЛОХО! Нужно больше котиков (и шапок)</div>

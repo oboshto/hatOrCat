@@ -178,6 +178,8 @@ let hatOrCat = (function () {
         nextButton.classList.add('is-hidden');
         scoreWrap.classList.remove('is-hidden');
         answerResultElem.classList.remove('answered');
+        answerResultElem.querySelector('.success').classList.add('is-hidden');
+        answerResultElem.querySelector('.failure').classList.add('is-hidden');
 
         if (currentPic === pics.length) {
             finish();
@@ -192,6 +194,7 @@ let hatOrCat = (function () {
     let finish = function () {
         clearTimeout(finishTimeout);
         changeStage('final-stage');
+        q('.logo').classList.remove('small');
 
         if (scoreValue <= Math.floor(pics.length * 0.3)) {
             q('.js-final-3').classList.remove('is-hidden');

@@ -29,8 +29,6 @@ h1.logo {
   font-family: Helv-Bold, Helvetica, Arial;
   font-size: 60px;
   text-align: center;
-  -webkit-transition: background .2s linear .2s;
-          transition: background .2s linear .2s;
   z-index: 1;
   cursor: default;
 }
@@ -71,6 +69,10 @@ button:focus {
 }
 .stage.game-stage {
   background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 .nyasha {
   position: absolute;
@@ -99,12 +101,6 @@ button:focus {
   margin: 20px 0 0 0;
   background: #000;
 }
-.game-stage {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
 .game-pic {
   position: absolute;
   width: 100%;
@@ -130,7 +126,6 @@ button:focus {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fff;
   text-transform: uppercase;
 }
 .game-buttons button {
@@ -152,8 +147,23 @@ button:focus {
   position: absolute;
   width: 100%;
   height: 100%;
-  font-size: 80px;
+  font-size: 142px;
+  font-family: Helv-Bold, Helvetica, Arial;
   display: none;
+}
+.answer-result > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+.answer-result .success {
+  color: green;
+}
+.answer-result .failure {
+  color: red;
 }
 .answer-result.answered {
   display: block;
