@@ -1,0 +1,11 @@
+{
+  "name": "hat-or-cat",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "babel app.js -d lib"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.0.0",
+    "babel-preset-env": "^1.1.8"
+  }
+}

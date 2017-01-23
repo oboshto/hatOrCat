@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Hat or Cat?</title>
+    <link href="assets/css/app.css" rel="stylesheet">
+</head>
+<body>
+<main class="app">
+    <h1 class="logo">Шапка или кот</h1>
+
+    <div class="welcome-stage stage is-active">
+        <h3>Попробуй отличить шапку от кота</h3>
+        <button class="start" onclick="hatOrCat.start()">Играть</button>
+
+        <div class="nyasha">
+            <img class="shapkakot" src="assets/imgs/shapkakot.png"/>
+            <img class="shadow" src="assets/imgs/shadow.png"/>
+        </div>
+    </div>
+
+    <div class="game-stage stage">
+        <div class="js-pic game-pic"></div>
+
+        <div class="js-answer-result answer-result">
+            <span class="success is-hidden">ДА!</span>
+            <span class="failure is-hidden">НЕТ!</span>
+        </div>
+
+        <div class="game-buttons">
+            <button onclick="hatOrCat.answer('hat')">Шапка</button>
+            <div class="js-score-block score-block">Счет: <span class="js-score-value"></span>/<span class="js-total-pics"></span></div>
+            <button class="js-next next is-hidden" onclick="hatOrCat.next()">Дальше</button>
+            <button onclick="hatOrCat.answer('cat')">Кот</button>
+        </div>
+
+    </div>
+
+    <div class="final-stage stage">
+        <div class="final-result">
+            <div class="js-final-1 is-hidden">ХОРОШ! Идеальное знание</div>
+            <div class="js-final-2 is-hidden">Неплохо! Старайся лучше</div>
+            <div class="js-final-3 is-hidden">ПЛОХО! Нужно больше котиков (и шапок)</div>
+        </div>
+        <button class="js-restart" onclick="hatOrCat.restart()">Restart</button>
+    </div>
+
+</main>
+
+<!--<script src="lib/app.js"></script>-->
+<script src="app.js"></script>
+</body>
+</html>
