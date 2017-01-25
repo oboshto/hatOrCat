@@ -152,14 +152,8 @@ let hatOrCat = function () {
         return array;
     };
 
-    // TODO: slice()
     let getSlides = function (array) {
-        let clearPics = [];
-
-        for (let i = 0; i < TOTAL_PICS; i += 1) {
-            clearPics.push(array[i]);
-        }
-        return clearPics;
+        return array.slice(0, TOTAL_PICS);
     };
 
     let loadNextImg = function () {
