@@ -1,6 +1,6 @@
 /*jslint es6 */
 
-let hatOrCat = (function () {
+let hatOrCat = function () {
     'use strict';
 
     const TOTAL_PICS = 5,
@@ -152,6 +152,7 @@ let hatOrCat = (function () {
         return array;
     };
 
+    // TODO: slice()
     let getSlides = function (array) {
         let clearPics = [];
 
@@ -227,15 +228,10 @@ let hatOrCat = (function () {
             toggleElement(scoreWrap);
             toggleElement(nextButton);
 
-            nextTimeout = setTimeout(function () {
-                next();
-            }, 2000);
-
+            nextTimeout = setTimeout(next, 2000);
         } else {
             answerResultElem.querySelector('.failure').classList.remove('is-hidden');
-            finishTimeout = setTimeout(function () {
-                finish();
-            }, 2000);
+            finishTimeout = setTimeout(finish, 2000);
         }
     };
 
@@ -260,4 +256,4 @@ let hatOrCat = (function () {
         answer: answer,
         next: next
     };
-})();
+}();
