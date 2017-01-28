@@ -40,100 +40,176 @@ let hatOrCat = function () {
             fullImg: '2b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
+            src: '3a.jpg',
+            fullImg: '3b.jpg',
             value: 'cat'
         }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '4a.jpg',
+            fullImg: '4b.jpg',
+            value: 'cat'
+        }, {
+            src: '5a.jpg',
+            fullImg: '5b.jpg',
+            value: 'cat'
+        }, {
+            src: '6a.jpg',
+            fullImg: '6b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
-            value: 'cat'
-        }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '7a.jpg',
+            fullImg: '7b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
-            value: 'cat'
-        }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '8a.jpg',
+            fullImg: '8b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
-            value: 'cat'
-        }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '9a.jpg',
+            fullImg: '9b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
-            value: 'cat'
-        }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '10a.jpg',
+            fullImg: '10b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
-            value: 'cat'
-        }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '11a.jpg',
+            fullImg: '11b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
+            src: '12a.jpg',
+            fullImg: '12b.jpg',
             value: 'cat'
         }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '13a.jpg',
+            fullImg: '13b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
-            value: 'cat'
-        }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '14a.jpg',
+            fullImg: '14b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
-            value: 'cat'
-        }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '15a.jpg',
+            fullImg: '15b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
-            value: 'cat'
-        }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '16a.jpg',
+            fullImg: '16b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
-            value: 'cat'
-        }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '17a.jpg',
+            fullImg: '17b.jpg',
             value: 'hat'
         }, {
-            src: '1a.jpg',
-            fullImg: '1b.jpg',
+            src: '18a.jpg',
+            fullImg: '18b.jpg',
+            value: 'hat'
+        }, {
+            src: '19a.jpg',
+            fullImg: '19b.jpg',
+            value: 'hat'
+        }, {
+            src: '20a.jpg',
+            fullImg: '20b.jpg',
+            value: 'hat'
+        }, {
+            src: '21a.jpg',
+            fullImg: '21b.jpg',
+            value: 'hat'
+        }, {
+            src: '22a.jpg',
+            fullImg: '22b.jpg',
             value: 'cat'
         }, {
-            src: '2a.jpg',
-            fullImg: '2b.jpg',
+            src: '23a.jpg',
+            fullImg: '23b.jpg',
+            value: 'cat'
+        }, {
+            src: '24a.jpg',
+            fullImg: '24b.jpg',
+            value: 'cat'
+        }, {
+            src: '25a.jpg',
+            fullImg: '25b.jpg',
+            value: 'cat'
+        }, {
+            src: '26a.jpg',
+            fullImg: '26b.jpg',
+            value: 'cat'
+        }, {
+            src: '27a.jpg',
+            fullImg: '27b.jpg',
+            value: 'cat'
+        }, {
+            src: '28a.jpg',
+            fullImg: '28b.jpg',
+            value: 'cat'
+        }, {
+            src: '29a.jpg',
+            fullImg: '29b.jpg',
+            value: 'cat'
+        }, {
+            src: '30a.jpg',
+            fullImg: '30b.jpg',
+            value: 'cat'
+        }, {
+            src: '31a.jpg',
+            fullImg: '31b.jpg',
+            value: 'cat'
+        }, {
+            src: '32a.jpg',
+            fullImg: '32b.jpg',
+            value: 'cat'
+        }, {
+            src: '33a.jpg',
+            fullImg: '33b.jpg',
+            value: 'cat'
+        }, {
+            src: '34a.jpg',
+            fullImg: '34b.jpg',
+            value: 'cat'
+        }, {
+            src: '35a.jpg',
+            fullImg: '35b.jpg',
+            value: 'cat'
+        }, {
+            src: '36a.jpg',
+            fullImg: '36b.jpg',
+            value: 'cat'
+        }, {
+            src: '37a.jpg',
+            fullImg: '37b.jpg',
+            value: 'cat'
+        }, {
+            src: '38a.jpg',
+            fullImg: '38b.jpg',
+            value: 'cat'
+        }, {
+            src: '39a.jpg',
+            fullImg: '39b.jpg',
+            value: 'cat'
+        }, {
+            src: '40a.jpg',
+            fullImg: '40b.jpg',
+            value: 'cat'
+        }, {
+            src: '41a.jpg',
+            fullImg: '41b.jpg',
+            value: 'cat'
+        }, {
+            src: '42a.jpg',
+            fullImg: '42b.jpg',
+            value: 'cat'
+        }, {
+            src: '43a.jpg',
+            fullImg: '43b.jpg',
+            value: 'hat'
+        }, {
+            src: '44a.jpg',
+            fullImg: '44b.jpg',
+            value: 'hat'
+        }, {
+            src: '45a.jpg',
+            fullImg: '45b.jpg',
             value: 'hat'
         }];
 
@@ -190,6 +266,8 @@ let hatOrCat = function () {
         clearTimeout(finishTimeout);
         changeStage('final-stage');
         q('.logo').classList.remove('small');
+
+        q('.js-final-score-value').innerHTML = scoreValue;
 
         if (scoreValue <= Math.floor(pics.length * 0.3)) {
             q('.js-final-3').classList.remove('is-hidden');

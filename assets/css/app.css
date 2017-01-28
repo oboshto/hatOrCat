@@ -74,6 +74,29 @@ button:focus {
   height: 100%;
   top: 0;
 }
+.stage.final-stage {
+  margin-top: 110px;
+  font-family: Helv-Bold, Helvetica, Arial;
+  font-size: 16px;
+  text-align: center;
+}
+.stage.final-stage .final-score {
+  font-size: 64px;
+  margin: 20px 0;
+}
+.stage.final-stage .restart {
+  margin-top: 60px;
+  border: 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 34px;
+}
+.stage.final-stage .final-text {
+  line-height: 1.42;
+}
+.stage.final-stage .final-text span {
+  font-size: 20px;
+}
 .nyasha {
   position: absolute;
   top: 45%;

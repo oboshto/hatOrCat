@@ -33,20 +33,19 @@
             <button class="js-next next is-hidden" onclick="hatOrCat.next()">Дальше</button>
             <button onclick="hatOrCat.answer('cat')">Кот</button>
         </div>
-
     </div>
 
     <div class="final-stage stage">
         <div class="final-result">
             <div class="final-score-block">
-                Ты набрал
-                <div class="js-final-score-value"></div>
+                Результат
+                <div class="js-final-score-value final-score"></div>
             </div>
-            <div class="js-final-1 is-hidden">ХОРОШ! Идеальное знание</div>
-            <div class="js-final-2 is-hidden">Неплохо! Старайся лучше</div>
-            <div class="js-final-3 is-hidden">ПЛОХО! Нужно больше котиков (и шапок)</div>
+            <div class="js-final-1 is-hidden final-text"><span>Идеальное знание!</span> <br> Теперь будет что рассказать внукам!</div>
+            <div class="js-final-2 is-hidden final-text"><span>Неплохо!</span> <br> Еще несколько попыток и ты шапкакото мастер!</div>
+            <div class="js-final-3 is-hidden final-text"><span>ПЛОХО!</span> <br> На что ты тратишь свою жизнь?</div>
         </div>
-        <button class="js-restart" onclick="hatOrCat.restart()">Restart</button>
+        <button class="js-restart restart" onclick="hatOrCat.restart()">Заново</button>
     </div>
 
 </main>
