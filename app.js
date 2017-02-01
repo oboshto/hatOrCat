@@ -346,7 +346,7 @@ let hatOrCat = function () {
 
     let shareResult = function () {
         VK.api("wall.post", {
-            message: 'Я ' + callBySex + ' ' + scoreValue + ' ' + proschet(['кота','котов','котов'])([scoreValue]) + ' от шапки в игре Шапка или Кот! :)',
+            message: 'Я ' + callBySex + ' ' + scoreValue + ' ' + proschet(['кота','котов','котов'])([scoreValue]) + ' от шапки в игре Шапка или Кот! vk.com/app3732547',
             attachment: 'photo-139010877_456239017'
         });
     };
