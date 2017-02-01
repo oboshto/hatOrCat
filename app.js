@@ -225,7 +225,7 @@ let hatOrCat = function () {
         }];
 
         scoreElem.innerHTML = scoreValue;
-        pics = getSlides(shuffleArray(allPics));
+        pics = shuffleArray(allPics).slice(0, TOTAL_PICS);
         loadNextImg();
     };
 
@@ -237,10 +237,6 @@ let hatOrCat = function () {
             array[j] = temp;
         }
         return array;
-    };
-
-    let getSlides = function (array) {
-        return array.slice(0, TOTAL_PICS);
     };
 
     let loadNextImg = function () {
