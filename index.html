@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hat or Cat?</title>
-    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="assets/css/app.css?zdarovaxyi" rel="stylesheet">
 </head>
 <body>
 <main class="app">
@@ -48,16 +48,43 @@
             <div class="js-final-3 is-hidden final-text"><span>ПЛОХО!</span> <br> На что ты тратишь свою жизнь?</div>
         </div>
 
-        <button class="js-restart restart" onclick="hatOrCat.restart()">Заново</button>
+        <button class="share-result " onclick="hatOrCat.shareResult()">Поделиться</button>
         <br>
-        <button class="share-result ghost-btn" onclick="hatOrCat.shareResult()">Поделиться</button>
+        <button class="js-restart restart ghost-btn" onclick="hatOrCat.restart()">Заново</button>
         <button class="invite-friends ghost-btn" onclick="hatOrCat.inviteFriends()">Позвать друзей</button>
     </div>
 
 </main>
 
+<div id="vk_ads_77252" class="js-bottom-ad"></div>
+<script type="text/javascript">
+    setTimeout(function() {
+        var adsParams = {"ad_unit_id":77252,"ad_unit_hash":"9b0fa12f52ec1c20529e20e737fe6fed"};
+        function vkAdsInit() {
+            VK.Widgets.Ads('vk_ads_77252', {
+                onAdsReady: function() {
+                        console.warn('HoC ad loaded');
+                        VK.callMethod("resizeWindow", null, 865);
+            }}, adsParams);
+        }
+        if (window.VK && VK.Widgets) {
+            vkAdsInit();
+        } else {
+            if (!window.vkAsyncInitCallbacks) window.vkAsyncInitCallbacks = [];
+            vkAsyncInitCallbacks.push(vkAdsInit);
+            var protocol = ((location.protocol === 'https:') ? 'https:' : 'http:');
+            var adsElem = document.getElementById('vk_ads_77252');
+            var scriptElem = document.createElement('script');
+            scriptElem.type = 'text/javascript';
+            scriptElem.async = true;
+            scriptElem.src = protocol + '//vk.com/js/api/openapi.js?139';
+            adsElem.parentNode.insertBefore(scriptElem, adsElem.nextSibling);
+        }
+    }, 0);
+</script>
+
 <script src="https://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
-<script src="lib/app.js"></script>
+<script src="lib/app.js?zdarovaxyi"></script>
 <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter42474464 = new Ya.Metrika({ id:42474464, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/42474464" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </body>
 </html>

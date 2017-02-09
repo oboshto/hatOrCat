@@ -4,8 +4,8 @@ let hatOrCat = function () {
     'use strict';
 
     const TOTAL_PICS = 30,
-          IMG_PATH = 'assets/imgs/hats-cats/',
-          CASES = [2, 0, 1, 1, 1, 2];
+        IMG_PATH = 'assets/imgs/hats-cats/',
+        CASES = [2, 0, 1, 1, 1, 2];
 
     function proschet(titles) {
         return function bindedProschet(amount) {
@@ -35,7 +35,8 @@ let hatOrCat = function () {
         currentPic = -1,
         pics = [],
         currentUser = {},
-        callBySex = 'отличил';
+        callBySex = 'отличил',
+        url = window.location.search;
 
     let init = function () {
         scoreValue = 0;
@@ -222,6 +223,26 @@ let hatOrCat = function () {
             src: '45a.jpg',
             fullImg: '45b.jpg',
             value: 'hat'
+        }, {
+            src: '46a.jpg',
+            fullImg: '46b.jpg',
+            value: 'cat'
+        }, {
+            src: '47a.jpg',
+            fullImg: '47b.jpg',
+            value: 'cat'
+        }, {
+            src: '48a.jpg',
+            fullImg: '48b.jpg',
+            value: 'cat'
+        }, {
+            src: '49a.jpg',
+            fullImg: '49b.jpg',
+            value: 'cat'
+        }, {
+            src: '50a.jpg',
+            fullImg: '50b.jpg',
+            value: 'cat'
         }];
 
         scoreElem.innerHTML = scoreValue;
@@ -275,6 +296,36 @@ let hatOrCat = function () {
         q('.logo').classList.remove('small');
 
         q('.js-final-score-value').innerHTML = scoreValue;
+
+        function getParams(url) {
+            let params = [];
+            let urlArr = url.split('&');
+            urlArr.forEach(function (e) {
+                let genArr = e.split('=');
+                params[genArr[0]] = genArr[1];
+            });
+
+            return params;
+        }
+
+        let urlParams = getParams(url);
+
+        console.info('urlParams', urlParams);
+
+        // VK.api('utils.getServerTime', function (data) {
+        //
+        // });
+
+        VK.api('secure.addAppEvent', {activity_id: '2', value: scoreValue}, function (data2) {
+            console.log(data2);
+        });
+
+
+        // VK.api('utils.getServerTime', function (data) {
+        //     VK.api('secure.checkToken', {timestamp: data.response, access_token: urlParams.access_token}, function (data2) {
+        //         console.log(data2);
+        //     })
+        // });
 
         if (scoreValue <= Math.floor(pics.length * 0.3)) {
             q('.js-final-3').classList.remove('is-hidden');
@@ -342,8 +393,9 @@ let hatOrCat = function () {
 
     let shareResult = function () {
         VK.api("wall.post", {
-            message: 'Я ' + callBySex + ' ' + scoreValue + ' ' + proschet(['кота','котов','котов'])([scoreValue]) + ' от шапки в игре Шапка или Кот! vk.com/app3732547',
-            attachment: 'photo-139010877_456239017'
+            message: 'Я ' + callBySex + ' ' + scoreValue + ' ' + proschet(['кота', 'котов', 'котов'])([scoreValue]) + ' от шапки в игре Шапка или Кот! vk.com/app3732547',
+            attachment: 'photo-139010877_456239018'
+            // attachment: 'photo-139010877_456239017'
         });
     };
 
