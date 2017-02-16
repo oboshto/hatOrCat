@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hat or Cat?</title>
-    <link href="assets/css/app.css?zdarovaxyi" rel="stylesheet">
+    <link href="assets/css/app.css?zdar" rel="stylesheet">
 </head>
 <body>
 <main class="app">
@@ -11,9 +11,9 @@
 
     <div class="welcome-stage stage is-active">
         <h3>Попробуй отличить шапку от кота</h3>
-        <button class="start" onclick="hatOrCat.start()">Играть</button>
+        <button class="js-start start">Играть</button>
         <br>
-        <button class="invite-friends ghost-btn" onclick="hatOrCat.inviteFriends()">Позвать друзей</button>
+        <button class="js-invite-friends invite-friends ghost-btn">Позвать друзей</button>
 
         <div class="nyasha">
             <img class="shapkakot" src="assets/imgs/shapkakot.png"/>
@@ -30,10 +30,10 @@
         </div>
 
         <div class="game-buttons">
-            <button onclick="hatOrCat.answer('hat')">Шапка</button>
+            <button value="hat" class="js-answer">Шапка</button>
             <div class="js-score-block score-block"><span class="js-score-value"></span> из <span class="js-total-pics"></span></div>
-            <button class="js-next next is-hidden" onclick="hatOrCat.next()">Дальше</button>
-            <button onclick="hatOrCat.answer('cat')">Кот</button>
+            <button class="js-next next is-hidden">Дальше</button>
+            <button value="cat" class="js-answer">Кот</button>
         </div>
     </div>
 
@@ -48,10 +48,10 @@
             <div class="js-final-3 is-hidden final-text"><span>ПЛОХО!</span> <br> На что ты тратишь свою жизнь?</div>
         </div>
 
-        <button class="share-result " onclick="hatOrCat.shareResult()">Поделиться</button>
+        <button class="js-share-result share-result">Поделиться</button>
         <br>
-        <button class="js-restart restart ghost-btn" onclick="hatOrCat.restart()">Заново</button>
-        <button class="invite-friends ghost-btn" onclick="hatOrCat.inviteFriends()">Позвать друзей</button>
+        <button class="js-restart restart ghost-btn">Заново</button>
+        <button class="js-invite-friends invite-friends ghost-btn">Позвать друзей</button>
     </div>
 
 </main>
@@ -84,7 +84,8 @@
 </script>
 
 <script src="https://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
-<script src="lib/app.js?zdarovaxyiz"></script>
+<script src="lib/app.js?zda"></script>
+<!--<script src="app.js"></script>-->
 <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter42474464 = new Ya.Metrika({ id:42474464, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/42474464" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </body>
 </html>

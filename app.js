@@ -36,7 +36,9 @@ let hatOrCat = function () {
         pics = [],
         currentUser = {},
         callBySex = 'отличил',
-        url = window.location.search;
+        url = window.location.search,
+        inviteBtns = q('.js-invite-friends', 'all'),
+        answerBtns = q('.js-answer', 'all');
 
     let init = function () {
         scoreValue = 0;
@@ -312,20 +314,10 @@ let hatOrCat = function () {
 
         console.info('urlParams', urlParams);
 
-        // VK.api('utils.getServerTime', function (data) {
-        //
+        // VK.api('secure.addAppEvent', {activity_id: '2', value: scoreValue}, function (data2) {
+        //     console.log(data2);
         // });
 
-        VK.api('secure.addAppEvent', {activity_id: '2', value: scoreValue}, function (data2) {
-            console.log(data2);
-        });
-
-
-        // VK.api('utils.getServerTime', function (data) {
-        //     VK.api('secure.checkToken', {timestamp: data.response, access_token: urlParams.access_token}, function (data2) {
-        //         console.log(data2);
-        //     })
-        // });
 
         if (scoreValue <= Math.floor(pics.length * 0.3)) {
             q('.js-final-3').classList.remove('is-hidden');
@@ -344,16 +336,15 @@ let hatOrCat = function () {
         }
     };
 
-    let answer = function (value) {
+    let answer = function () {
         if (answerResultElem.classList.contains('answered')) {
             return;
         }
 
         answerResultElem.classList.add('answered');
-
         gamePic.style.backgroundImage = 'url(' + IMG_PATH + pics[currentPic].fullImg + ')';
 
-        if (pics[currentPic].value === value.toLowerCase()) {
+        if (pics[currentPic].value === this.value.toLowerCase()) {
             answerResultElem.querySelector('.success').classList.remove('is-hidden');
             toggleElement(scoreWrap);
             toggleElement(nextButton);
@@ -393,25 +384,68 @@ let hatOrCat = function () {
 
     let shareResult = function () {
         VK.api("wall.post", {
-            message: 'Я ' + callBySex + ' ' + scoreValue + ' ' + proschet(['кота', 'котов', 'котов'])([scoreValue]) + ' от шапки в игре Шапка или Кот! vk.com/app3732547 #шапкаиликот',
+            message: 'Я ' + callBySex + ' ' + scoreValue + ' ' + proschet(['кота', 'котов', 'котов'])([scoreValue]) + ' от шапки в игре Шапка или Кот! vk.com/app3732547',
             attachment: 'photo-139010877_456239018'
             // attachment: 'photo-139010877_456239017'
         });
     };
 
-    return {
-        start: start,
-        restart: restart,
-        answer: answer,
-        next: next,
-        inviteFriends: inviteFriends,
-        shareResult: shareResult
-    };
+
+    // Event listeners
+    q('.js-start').addEventListener('click', start);
+    q('.js-restart').addEventListener('click', restart);
+    q('.js-share-result').addEventListener('click', shareResult);
+    q('.js-next').addEventListener('click', next);
+
+    for (let i = 0; i < inviteBtns.length; i++) {
+        inviteBtns[i].addEventListener('click', inviteFriends);
+    }
+    for (let i = 0; i < inviteBtns.length; i++) {
+        answerBtns[i].addEventListener('click', answer);
+    }
 }();
 
 
-VK.init(function () {
-    console.log('VK connected');
-}, function () {
-    console.warn('VK loading failed');
-}, '5.62');
+// VK.init(function () {
+//     console.log('VK connected');
+// }, function () {
+//     console.warn('VK loading failed');
+// }, '5.62');
+
+
+// var obj = {
+//     api_url: "https://api.vk.com/api.php",
+//     access_token: "aad4d29281123adb0c13dda1db8dbcbf83ac0c0f06dab1aabe19779bf169c17d32bc4d4b0c76582896ab2",
+//     ad_info: "ElsdCQNfQFZkAgNNRARQBHR4FAsmMQxVUUZGNgBQbwYfQyQrWQA",
+//     ads_app_id: "3732547_108c86906535bbf73a",
+//     api_id: "3732547",
+//     api_settings: "2106625",
+//     auth_key: "23a5f33167c722681dd72bae7422d221",
+//     group_id: "0",
+//     hash: "",
+//     is_app_user: "1",
+//     is_secure: "1",
+//     language: "0",
+//     lc_name: "4e37e967",
+//     parent_language: "0",
+//     referrer: "unknown",
+//     secret: "8c2dd5700f",
+//     sid: "e2c300bef136de4c85548416031ac220b51925ea2f20ceaa421c6d8bd14d21b19de73f76cab14dd33c716",
+//     user_id: "2313077",
+//     viewer_id: "2313077",
+//     viewer_type: "2"
+// };
+//
+// function server() {
+//     xmlhttp = new XMLHttpRequest();
+//     xmlhttp.open("GET", "http://localhost:8001/getstring" + obj, true);
+//     xmlhttp.onreadystatechange = function () {
+//         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//             string = xmlhttp.responseText;
+//         }
+//     };
+//     xmlhttp.send();
+// }
+//
+//
+// console.log('obj', obj);

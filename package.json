@@ -2,10 +2,11 @@
   "name": "hat-or-cat",
   "version": "0.0.1",
   "scripts": {
-    "build": "babel app.js -d lib"
+    "build": "babel app.js -o lib/app.js | babili lib/app.js -o lib/app.js"
   },
   "devDependencies": {
     "babel-cli": "^6.0.0",
-    "babel-preset-env": "^1.1.8"
+    "babel-preset-env": "^1.1.8",
+    "babili": "0.0.11"
   }
 }
